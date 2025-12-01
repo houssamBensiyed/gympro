@@ -1,0 +1,46 @@
+# ============================================
+# GYM MANAGEMENT PLATFORM
+# Docker Ignore File
+# ============================================
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.idea
+.vscode
+*.sublime-*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment (keep for Docker build)
+# .env
+
+# Documentation
+README.md
+docs/
+
+# Testing
+tests/
+phpunit.xml
+.phpunit.result.cache
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+.cache/
+
+# Vendor (if using Composer)
+# vendor/
+
+# Node modules (if any)
+node_modules/
