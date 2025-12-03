@@ -1,0 +1,287 @@
+/**
+ * ============================================
+ * GYM MANAGEMENT PLATFORM
+ * Dashboard Specific Styles
+ * ============================================
+ */
+
+/* ============================================
+   STATISTICS SECTION
+   ============================================ */
+.stats-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.stat-card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.stat-card-primary::before { background-color: var(--primary-color); }
+.stat-card-success::before { background-color: var(--success-color); }
+.stat-card-warning::before { background-color: var(--warning-color); }
+.stat-card-info::before { background-color: var(--info-color); }
+.stat-card-danger::before { background-color: var(--danger-color); }
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.stat-card-primary .stat-icon {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: var(--primary-color);
+}
+
+.stat-card-success .stat-icon {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success-color);
+}
+
+.stat-card-warning .stat-icon {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning-color);
+}
+
+.stat-card-info .stat-icon {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--info-color);
+}
+
+.stat-icon i {
+    font-size: 1.5rem;
+}
+
+.stat-details {
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+.stat-footer {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+}
+
+.stat-badge {
+    font-size: 0.75rem;
+}
+
+/* ============================================
+   CHARTS SECTION
+   ============================================ */
+.charts-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.chart-card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    padding: var(--spacing-md);
+}
+
+/* ============================================
+   TABLES SECTION
+   ============================================ */
+.tables-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.tables-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.table-card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+/* Course Info in Table */
+.course-info,
+.equipment-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.course-info strong,
+.equipment-info strong {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.course-info small,
+.equipment-info small {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+/* Category Badge */
+.category-badge,
+.type-badge {
+    display: inline-block;
+    padding: 0.25em 0.6em;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: var(--radius-full);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+/* Quantity Display */
+.quantity {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* ============================================
+   ALERT SECTION
+   ============================================ */
+.alert-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.alert-card {
+    background-color: var(--bg-secondary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.alert-card.alert-warning {
+    border-left: 4px solid var(--warning-color);
+}
+
+.alert-header {
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+    background-color: rgba(245, 158, 11, 0.05);
+}
+
+.alert-title {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--warning-dark);
+}
+
+.alert-body {
+    padding: var(--spacing-lg);
+}
+
+.low-stock-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.low-stock-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-md);
+}
+
+.item-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.item-quantity {
+    font-weight: 600;
+}
+
+/* ============================================
+   RESPONSIVE - DASHBOARD SPECIFIC
+   ============================================ */
+@media (max-width: 1200px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tables-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}
